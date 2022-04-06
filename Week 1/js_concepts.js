@@ -9,9 +9,13 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
 // A list of parameters to the function, enclosed in parentheses and separated by commas.
 // The JavaScript statements that define the function, enclosed in curly brackets, {...}.
 
-function square(number) {
-    return number * number;
-}
+// function square(number) {
+//     return number * number;
+// }
+
+// const square = number => number * number;
+
+// console.log(square(25));
 
 // Primitive parameters (such as a number) are passed to functions by value; the value is passed to 
 // the function, but if the function changes the value of the parameter, this change is not reflected 
@@ -117,7 +121,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
 
 
  //`this` within the object refers to the object itself
- //student.printCourses();
+//  student.printCourses();
 
  //invoking a method referencing `this` outside of the object results in `this` being undefined
 //  const printCourses = student.printCourses;
@@ -150,24 +154,24 @@ JSON specification specifically does not define their semantics
  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
  ******************************************/
 
-// const car = `
-// {
-//     "make": "Honda",
-//     "model": "Civic",
-//     "year":  2001,
-//     "owner": {
-//         "name": "Chengyu"
-//     }
-// }
-// `;
+const car = `
+{
+    "make": "Honda",
+    "model": "Civic",
+    "year":  2001,
+    "owner": {
+        "name": "Chengyu"
+    }
+}
+`;
 
 // console.log(car);
 // console.log(car.year);
 
-// const carObject = JSON.parse(car);
+//const carObject = JSON.parse(car);
 // console.log(carObject);
 // console.log(carObject.year);
-// console.log(JSON.stringify(carObject));
+//console.log(JSON.stringify(carObject));
 
 
 /******************************************
@@ -307,10 +311,20 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Dest
 // console.log (`${id} ${name} ${grade}`)
 
 // const {name} = student;
-// const {id, grade, name} = student;
-// const {name: n} = student; // referring to name with alias n
+//const {id, grade, name} = student;
 
-// console.log (`${id} ${name} ${n} ${grade}`)
+
+// function concatstudent({id, grade, name}) { console.log (`${id} ${name} ${grade}`) }
+// concatstudent(student.id, student.grade, student.name)
+// const {id, grade, name: n} = student; // referring to name with alias n
+
+// console.log (`${id} ${n} ${grade}`)
+
+// Array destructuring
+// const x = [1, 2, 3, 4, 5];
+// const [y, z] = x;
+// console.log(y); // 1
+// console.log(z); // 2
 
 
 /******************************************
@@ -333,9 +347,10 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spre
 
 // Spread can be used to combine objects
 // const student = { name: "Paul", course: "Hello" };
-// const course = {course: "Web Apps" };
+// const course = {course2: "Web Apps" };
 
 // const combined = {...student, ...course, school: 'depaul'};
+// const combined2 = {name: student.name, course: student.course, course2: course.course2}
 // const combined_copy = {...combined};
 // console.log(combined);
 // console.log(combined_copy);
@@ -367,8 +382,8 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
 //     //      }
 //     //  }
 
-// const Student = require('./student');
-// const Course = require('./course');
+const Student = require('./student');
+const Course = require('./course');
 
 // class Student {
 //     constructor(name, courses) {
@@ -388,9 +403,9 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
 
 // // 
 
-const student = new Student("Paul", [new Course("Data Structures", "Fall 2021"), new Course("Algorithms", "Fall 2020")])
+// const student = new Student("Paul", [new Course("Data Structures", "Fall 2021"), new Course("Algorithms", "Fall 2020")])
 
- student.printCourses();
+//  student.printCourses();
 
 // // // Inheritance
 
@@ -429,9 +444,9 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 // console.log(user.name);
 
 // // map
-// const arr = [1, 2, 3, 4]
-// const arrPlus2 = arr.map((element) => element + 2);
-// console.log(arr);
-// console.log(arrPlus2);
+const arr = [1, 2, 3, 4]
+const arrPlus2 = arr.map((element) => element + 2);
+console.log(arr);
+console.log(arrPlus2);
 
 // const test = {name: "Paul"}
