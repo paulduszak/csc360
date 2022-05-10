@@ -1,0 +1,65 @@
+{
+  "posts": [
+    {
+      "title": "My First Post",
+      "content": "Some content",
+      "author": "paul",
+      "dateCreated": 1652210137940,
+      "dateCompleted": null,
+      "completed": false,
+      "id": 2342343
+    },
+    {
+      "title": "test",
+      "content": "test",
+      "author": "test",
+      "dateCreated": 1652211742966,
+      "completed": false,
+      "id": 959374
+    },
+    {
+      "title": "test2",
+      "content": "test",
+      "author": "test",
+      "dateCreated": 1652211752072,
+      "completed": false,
+      "id": 621664
+    },
+    {
+      "title": "test21",
+      "content": "test",
+      "author": "test",
+      "dateCreated": 1652211787776,
+      "completed": false,
+      "id": 703065
+    },
+    {
+      "title": "asd",
+      "content": "",
+      "author": "asd",
+      "dateCreated": 1652212070081,
+      "completed": false,
+      "id": 979186
+    },
+    {
+      "title": "asd",
+      "content": "",
+      "author": "asd",
+      "dateCreated": 1652212074366,
+      "completed": false,
+      "id": 681217
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "paul",
+      "password": "badpassword"
+    },
+    {
+      "username": "asd",
+      "password": "asd",
+      "id": 2
+    }
+  ]
+}
