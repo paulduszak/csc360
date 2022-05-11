@@ -22,8 +22,6 @@ function postReducer(state, action) {
         // case 'DELETE_POST':
         //   // implement logic for deleting post
         //   return state.filter(post => post.id != action.id)
-        case 'FETCH_POSTS':
-            return action.posts;
         default:
         return state;
     }

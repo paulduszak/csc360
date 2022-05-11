@@ -1,6 +1,4 @@
 import React, {useState} from "react";
-import { useResource } from "react-request-hook";
-
 
 export default function CreatePost({ user, dispatch, posts }) {
   const [ title, setTitle ] = useState("")
@@ -8,20 +6,11 @@ export default function CreatePost({ user, dispatch, posts }) {
 
   function handleTitle (evt) { setTitle(evt.target.value) }
   function handleContent (evt) { setContent(evt.target.value) }
-
-  const [post , createPost ] = useResource(({ title, content, author }) => ({
-    url: '/posts',
-    method: 'post',
-    data: { title, content, author }
-}))
-
-
   function handleCreate (evt) {  
     //const newPost = { title, content, author: user, dateCreated: Date.now(), dateCompleted: null, complete: false }
     //console.log(newPost)
     // const newPostCopy = { ...newPost }
     //setPosts([newPost, ...posts])
-    createPost({ title, content, author: user })
     dispatch({type:'CREATE_POST', title, content, author: user})
   }
 

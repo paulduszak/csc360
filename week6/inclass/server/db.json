@@ -2,19 +2,42 @@
   "posts": [
     {
       "id": 1,
+      "title": "TEST TEXT",
+      "content": "MORE content",
+      "author": "PAUL"
+    },
+    {
+      "id": 2,
       "title": "portal",
       "content": "Some content"
-    },
-    {
-      "id": 2
-    },
-    {
-      "id": 3
     },
     {
       "id": "4",
       "title": "My new post",
       "content": "Post content"
+    },
+    {
+      "id": "7774",
+      "title": "Post 7774",
+      "content": "Post content"
+    },
+    {
+      "title": "MY NEW POST",
+      "content": "MY NEW POST",
+      "author": "test",
+      "id": "zCrgzDR"
+    },
+    {
+      "title": "MY NEW POSTe",
+      "content": "MY NEW POSTe",
+      "author": "test",
+      "id": "37ARwUf"
+    },
+    {
+      "title": "MY NEW POSTe555",
+      "content": "MY NEW POSTe",
+      "author": "test",
+      "id": "D2jxIWi"
     }
   ],
   "users": [
@@ -22,13 +45,6 @@
       "id": 1,
       "username": "paul",
       "password": "badpassword"
-    }
-  ],
-  "themes": [
-    {
-      "id": 1,
-      "primaryColor": "deepskyblue",
-      "secondaryColor": "coral"
     }
   ]
 }

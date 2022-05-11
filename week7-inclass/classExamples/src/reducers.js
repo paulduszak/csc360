@@ -17,13 +17,21 @@ function postReducer(state, action) {
             title: action.title,
             content: action.content,
             author: action.author,
+            dateCreated: action.dateCreated,
+            dateCompleted: action.dateCompleted,
+            completed: action.completed,
+            id: action.id
         };
         return [newPost, ...state];
+        case 'TOGGLE_POST':
+            console.log('in toggle reducer')
+            return action.updatedPosts
+
+        case 'DELETE_POST':
+            return action.updatedPosts
         // case 'DELETE_POST':
         //   // implement logic for deleting post
         //   return state.filter(post => post.id != action.id)
-        case 'FETCH_POSTS':
-            return action.posts;
         default:
         return state;
     }

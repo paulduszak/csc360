@@ -1,8 +1,5 @@
-import React, { useState, useReducer, useEffect, createContext } from "react";
-import { useResource } from 'react-request-hook'
-
+import React, { useState, useReducer } from "react";
 import UserBar from './UserBar'
-import Header from './Header'
 import PostList from "./PostList";
 import CreatePost from "./CreatePost";
 
@@ -19,54 +16,19 @@ function App() {
   // const [user, dispatchUser] = useReducer(userReducer, "")
   // const [posts, dispatchPosts] = useReducer(postReducer, [])
 
-
   const [ state, dispatch ] = useReducer(appReducer, { user: '', posts: [] })
-  
-  const [ posts, getPosts ] = useResource(() => ({
-    url: '/posts',
-    method: 'get'
-  }))
 
-  useEffect(getPosts, [])
-
-  useEffect(() => {
-    if (posts && posts.data) {
-        dispatch({ type: 'FETCH_POSTS', posts: posts.data })
-    }
-  }, [posts])
-
-
-
-  useEffect(() => {
-    console.log('user effect hook firing')
-    if (state.user) {
-       document.title = `${state.user}’s Blog` 
-     } else {
-       document.title = 'My Blog'
-     }
-   }, [state.user]
-  )
-
-  useEffect(() => {
-    console.log('post effect hook firing')
-   }, [state.posts]
-  )
   //const [posts, setPosts] = useState([])
 
 
 
   return (
     <div>
-      <ThemeContext.Provider value={{primary:'yellow'}}>
-        <Header text="My Blog" />
-      </ThemeContext.Provider>
       <UserBar user={state.user} dispatch={dispatch} />
       {state.user && <CreatePost user={state.user} posts={state.posts} dispatch={dispatch} />}
-      <PostList posts={state.posts} />
+      <PostList posts={state.posts} dispatch={dispatch} />
     </div>
   );
 }
-
-export const ThemeContext = createContext({primary:'red'})
 
 export default App;
