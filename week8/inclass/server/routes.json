@@ -1,0 +1,4 @@
+{
+    "/login/:username/:password":    
+    "/users?username=:username&password=:password"
+}

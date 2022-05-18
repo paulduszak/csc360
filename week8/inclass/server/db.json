@@ -1,0 +1,94 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "TEST TEXT",
+      "content": "MORE content",
+      "author": "PAUL"
+    },
+    {
+      "id": 2,
+      "title": "portal",
+      "content": "Some content"
+    },
+    {
+      "id": "4",
+      "title": "My new post",
+      "content": "Post content"
+    },
+    {
+      "id": "7774",
+      "title": "Post 7774",
+      "content": "Post content"
+    },
+    {
+      "title": "MY NEW POST",
+      "content": "MY NEW POST",
+      "author": "test",
+      "id": "zCrgzDR"
+    },
+    {
+      "title": "MY NEW POSTe",
+      "content": "MY NEW POSTe",
+      "author": "test",
+      "id": "37ARwUf"
+    },
+    {
+      "title": "MY NEW POSTe555",
+      "content": "MY NEW POSTe",
+      "author": "test",
+      "id": "D2jxIWi"
+    },
+    {
+      "title": "test",
+      "content": "test",
+      "author": "test",
+      "id": "j8wqgCY"
+    },
+    {
+      "title": "test",
+      "content": "test",
+      "author": "paul",
+      "id": "hgYtG6j"
+    },
+    {
+      "title": "xzc",
+      "content": "sdfsdfsd",
+      "id": "WMAnZyM"
+    },
+    {
+      "title": "xzc",
+      "content": "sdfsdfsd",
+      "id": "kYMoAmw"
+    },
+    {
+      "title": "MYNEWPOST",
+      "content": "MYNEWPOST",
+      "author": "paul",
+      "id": "kuRche6"
+    },
+    {
+      "title": "TEST",
+      "content": "TEST2",
+      "author": "paul",
+      "id": "Mk81dtv"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "paul",
+      "password": "badpassword"
+    },
+    {
+      "username": "PAULTEST",
+      "password": "test",
+      "id": 2
+    },
+    {
+      "username": "NEWTEST",
+      "password": "test",
+      "id": 3
+    }
+  ]
+}
